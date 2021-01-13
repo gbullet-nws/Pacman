@@ -1,15 +1,81 @@
-html, body{
+    /* INDEX */
+/* 1. GENRAL = l.8 */
+/* 2. HUD = l.22 */
+/* 3. xxx = l. */
+/* 4. xxx = l. */
+
+/* ---------------------*/
+/* ---------------------*/
+
+/***********/ 
+/* GENERAL */
+/***********/ 
+html, body
+{
     margin: 0px;
     padding: 0px;
     border-width: 0px;
     width: 100%;
     height: 100%;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
 }
 
-#myCanvas 
+/* ---------------------*/
+
+/***********/ 
+/*** HUD ***/
+/***********/ 
+
+/* Le header est le container pour le HUD */
+/* HUD et HUDelements */
+#HUD 
 {
-	position:fixed;
-	top:0px;
-    left:0px;
-    background-color: grey;
+    height: 200px;
+    text-align: center;
 }
+.HUDelements
+{
+    width: 18%;
+    display: inline-block;
+    border-style: dotted;
+}
+.HUDelements#HomeButton
+{
+    border-style: none;
+    font-size: 100px;
+}
+
+/* Chaque element du HUD */
+
+/* Vies et Boosts */
+#PlayerInfos
+{
+    background-color: rgb(206, 206, 206);
+    font-size: 120%;
+}
+.LifePoints
+{
+    display: inline
+}
+.BoostPoints
+{
+    display: inline
+}
+
+/* Bouton du Menu Principal */
+#HomeNav
+{
+    font-size: 100%;
+    border: none;
+}
+
+#myCanvas /* canvas du jeu */
+{
+    position:fixed; /* position du canvas */
+    width: 1920px; height : 1080px; /* dimensions du canvas */
+	margin: 0px; padding: 0px; /* marge du canvas */
+    background-color: rgb(230, 230, 230); /* couleur de fond du canvas */
+}
+

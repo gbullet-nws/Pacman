@@ -4,27 +4,80 @@
         <title> Pacman : Studio Pixel </title>
         <meta charset="utf-8"/>
 
-        <link href="style.css" rel="stylesheet" type="text/css"/>
-        <script src="main.js"></script>
+        <link type="text/css" href="style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <!-- <script type="text/javascript" src="main.js"> </script> -->
     </head>
 
     <body>
 
-        ................
-        code pacman 
-        ................
+        <!-- Le header sert de HUD au joueur -->
+        <header id="HUD">
+            <!-- HUD du joueur -->
+            <div class="HUDelements" id="PlayerInfos">
+                <div id="PlayerLifePoints">
+                    <p class="LifePoints" id="Life1"> ♥ </p> 
+                    <p class="LifePoints" id="Life2"> ♥ </p> 
+                    <p class="LifePoints" id="Life3"> ♥ </p>
+                    <!-- <img class="LifePoint" src=""> -->
+                </div>
+                <div id="PlayerBoostPoints">
+                    <p class="BoostPoints" id="Boost1"> ◘ </p> 
+                    <p class="BoostPoints" id="Boost2"> ◘ </p> 
+                    <p class="BoostPoints" id="Boost3"> ◘ </p>
+                    <!-- <img class="BoostPoint" src=""> -->
+                </div>
+            </div>
+            <div class="HUDelements" id="Timer">
+                <p> TIMER : </p>
+                <p id="TimerChrono"> xx,xx.xx </p>
+            </div>
+            <div class="HUDelements" id="Score">
+                <p> Score : </p>
+                <p id="ScorePoints"> xXx </p>
+            </div>
+            <div class="HUDelements" id="HigherScore">
+                <p> Higher Score : </p>
+                <p id="HigherScorepoints"> xXXXx</p>
+            </div>
+            <!-- Bouton menu principal -->
+            <div class="HUDelements" id="HomeButton">
+                <button id="HomeNav"> ► </button>
+                <!-- <img id="HomeNav" src=""> -->
+            </div>
+        </header>
 
-        <canvas id="myCanvas" width="480" height="320" ></canvas>
+        <!-- Canvas du jeu -->
+        <canvas id="myCanvas" width="1920" height="880"> </canvas>
 
         <script>
+
             // JavaScript 
+
+            //déclaration du canvas
+            var myCanvas = document.getElementById("myCanvas");
+            var ctx = myCanvas.getContext("2D");
+
+            var mur_1 = new Image();
+            ctx.src = "assets/img/mur1.png";
+            ctx.onload = function()
+            {
+                ctx.drawImage(mur1, 10, 10, 100, 100);
+            }
+
+            /*
+            image.addEventListener("load", function()
+            {
+                ctx.drawImage("assets/img/mur1.png", 75, 25, 150, 100);
+            } , false);
+            */
+            
         </script>
 
-        <script>
-        var myCanvas = document.getElementById("myCanvas");
-        var ctx = myCanvas.getContext("2D");
-        var mur_0 = document.getElementById("0.png");
-        void ctx.drawImage("0.png", 100, 100, 50, 50); </script>
+        <script>    
+            // JS supplémentaire
+        </script>
 
     </body>
     
