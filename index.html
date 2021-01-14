@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang=fr>
+
     <head>
         <title> Pacman : Studio Pixel </title>
         <meta charset="utf-8"/>
-
+        <!-- liens -->
         <link type="text/css" href="style.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-        <!-- <script type="text/javascript" src="main.js"> </script> -->
     </head>
 
     <body>
@@ -48,36 +48,173 @@
             </div>
         </header>
 
+
+        <main>
+
+            <!-- images en HTML 
+
+            <div id="TilesMurs">
+                <div>
+                    <img class="Tiles" id="mur0" title="tile 0 mur" alt="tile 0 mur" src="assets/img/mur0.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur1" title="tile 1 mur" alt="tile 1 mur" src="assets/img/mur1.png"> 
+                </div>
+                <div>
+                    <img class="Tiles" id="mur2" title="tile 2 mur" alt="tile 2 mur" src="assets/img/mur2.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur3" title="tile 3 mur" alt="tile 3 mur" src="assets/img/mur3.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur4" title="tile 4 mur" alt="tile 4 mur" src="assets/img/mur4.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur5" title="tile 5 mur" alt="tile 5 mur" src="assets/img/mur5.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur6" title="tile 6 mur" alt="tile 6 mur" src="assets/img/mur6.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur7" title="tile 7 mur" alt="tile 7 mur" src="assets/img/mur7.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur8" title="tile 8 mur" alt="tile 8 mur" src="assets/img/mur8.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur9" title="tile 9 mur" alt="tile 9 mur" src="assets/img/mur9.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur10" title="tile 10 mur" alt="tile 10 mur" src="assets/img/mur10.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur11" title="tile 11 mur" alt="tile 11 mur" src="assets/img/mur11.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur12" title="tile 12 mur" alt="tile 12 mur" src="assets/img/mur12.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur13" title="tile 13 mur" alt="tile 13 mur" src="assets/img/mur13.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur14" title="tile 14 mur" alt="tile 14 mur" src="assets/img/mur14.png">
+                </div>
+                <div>
+                    <img class="Tiles" id="mur15" title="tile 15 mur" alt="tile 15 mur" src="assets/img/mur15.png">
+                </div>
+            </div>
+
+        FIN images en HTML -->
+
+        </main>
+
         <!-- Canvas du jeu -->
-        <canvas id="myCanvas" width="1920" height="880"> </canvas>
+        <div id="CanvasBlock"> 
+            <canvas id="myCanvas" width="1600px" height="800px"> </canvas> 
+        </div>
+
+        <script type="text/javascript">
+ 
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+     
+            var mur1 = new Image();
+            mur1.onload = function() 
+            {
+                ctx.drawImage(mur1, 0, 0, 50, 50);
+            };
+            mur1.src = "assets/img/mur1.png";
+
+            var mur2 = new Image();
+            mur2.onload = function() 
+            {
+                ctx.drawImage(mur2, 100, 100, 50, 50);
+            };
+            mur2.src = "assets/img/mur2.png";
+
+            var mur3 = new Image();
+            mur3.onload = function() 
+            {
+                ctx.drawImage(mur3, 400, 400, 50, 50);
+            };
+            mur3.src = "assets/img/mur3.png";
+     
+            var pacman = new Image();
+            pacman.onload = function() 
+            {
+                ctx.drawImage(pacman, 100, 100, 48, 48);
+            };
+            pacman.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pacman.svg/220px-Pacman.svg.png";
+     
+        </script>
+
+        <script>
+            // Création du tableau (map)
+            var tileCheck = 0;
+            var tileLabyrinthe = 0;
+
+            for(var raw=1; raw<16; raw++) // créé 16 lignes
+            {
+                for(var column=1; column<32; column++) // créé 32 colonnes
+                {
+                    if(labyrinthe ) // 
+                    {
+
+                    }
+                    else
+                    {
+                    
+                    }
+                }
+            }
+
+            // si l'index du tableau contient le chiffre || nombre X 
+            // alors murX apparait
+
+        </script>
 
         <script>
 
-            // JavaScript 
+            // 16 lignes x 32 colonnes
+            var Labyrinthe0 = 
+                [
+                    [ 9, 5, 5, 1, 5, 5, 3, 9, 1, 1, 1, 1, 3, 9, 5, 5, 5, 5, 3, 9, 1, 1, 1, 1, 3, 9, 5, 5, 1, 5, 5, 3 ],
+                    [ 8, 0, 0, 0, 2 ],
+                    [ 8, 0, 0, 0, 2 ],
+                    [ 8, 0, 0, 0, 2 ],
+                    [ 12, 4, 4, 4, 6 ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+
+                ];
+
+        </script>
+
+        <!-- <script>    
 
             //déclaration du canvas
-            var myCanvas = document.getElementById("myCanvas");
-            var ctx = myCanvas.getContext("2D");
+            var myCanvas = document.getElementById("myCanvas"); // récupération du canvas
+            var ctx = myCanvas.getContext("2D"); // création d'un contexte 2D pour modifier le canvas
 
-            var mur_1 = new Image();
-            ctx.src = "assets/img/mur1.png";
-            ctx.onload = function()
-            {
-                ctx.drawImage(mur1, 10, 10, 100, 100);
-            }
-
-            /*
-            image.addEventListener("load", function()
-            {
-                ctx.drawImage("assets/img/mur1.png", 75, 25, 150, 100);
-            } , false);
-            */
+            var mur1 = new Image() // création de l'objet mur1
+            mur1.src = "assets/img/mur1.png"; // chemin d'accès à la source
             
-        </script>
+            myCanvas.drawImage(ctx, 0, 0) // affichage de l'image
 
-        <script>    
-            // JS supplémentaire
-        </script>
+        </script> -->
+
+        <footer>
+            <p> Projet Étudiant | © 2021 - Studio Pixel | Normandie Web Shcool </p>
+        </footer>
 
     </body>
     
