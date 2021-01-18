@@ -139,6 +139,13 @@
                 [1,1,1,1,1,1,1,1,1,1,1,1,1]
             ]
 
+            var mur1 = new Image();
+            mur1.onload = function() 
+            {
+                ctx.drawImage(mur1, 0, 0, 50, 50);
+            };
+            mur1.src = "assets/img/mur1.png";
+
             var labyrinth = document.getElementById('labyrinth');
 	
             function drawWorld()

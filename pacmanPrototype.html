@@ -9,7 +9,7 @@
 
         <style>
 
-            *  /* regarder les blocs */
+            *  /* afficher la division des cases */
             { 
             /* outline: 1px dotted purple; */
             }
@@ -84,7 +84,7 @@
             y: 4    // axe des y ( ligne )
         }
 
-        /* création du labyrinthe avec des array dans un grand array */
+        /* création du labyrinthe avec des array dans un grand array */ // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
         tableau = [ 
             [ 1, 1, 1, 1, 1, 1, 1, 1 ,1 ,1 ,1, 1, 1 ], 
             [ 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1 ], 
@@ -100,7 +100,7 @@
 
         var labyrinthe = document.getElementById("labyrinthe");
         
-        /* fonction de dessin du labyrinthe selon le chiffre présent dans les index des array */
+        /* fonction de dessin du labyrinthe selon le chiffre présent dans les index des array */ // https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
         function dessinerLabyrinthe()
         {
             labyrinthe.innerHTML = '';                                              // on vide la <div> de labyrinthe
@@ -117,7 +117,7 @@
                     {                                                               // alors
                         labyrinthe.innerHTML += "<div class='caseVide'></div>";     // affiche une case vide
                     }
-                    else if (tableau[ligne][colonne] === 2)                                   // sinon la case === 2
+                    else if (tableau[ligne][colonne] === 2)                         // sinon la case === 2
                     {                                                               // alors
                         labyrinthe.innerHTML += "<div class='pacman'></div>";       // affiche pacman
                     }
@@ -128,11 +128,11 @@
 
         dessinerLabyrinthe(); // appel de la fonction pour afficher le labyrinthe
 
-        /* evenement de déplacement de pacman (recharge le tableau) */
-        document.onkeydown = function(event)
+        /* evenement de déplacement de pacman (recharge le tableau) */ // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
+        document.onkeydown = function(event)                           // https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
         {
             /* déplacement à gauche */
-            if (event.keyCode === 37) // si flèche de gauche pressée 
+            if (event.keyCode === 37) // si flèche de gauche pressée   // https://developer.mozilla.org/en-US/docs/Web/API/Event
             {
                 if ( tableau[pacman.y][pacman.x-1] !== 1)   // si la case visée est différente d'un mur
                 {                                           // alors 
